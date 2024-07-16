@@ -1,0 +1,195 @@
+.nav-link {
+  position: relative;
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+.submenu {
+  visibility: hidden;
+}
+.nav-link:hover .submenu {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2.5px;
+  transform: scaleX(0);
+  background-color: black;
+  transform-origin: left;
+  transition: all 0.3s linear;
+}
+.nav-icon {
+  position: relative;
+}
+.nav-icon:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.nav-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background-color: #ff497c;
+  border-radius: 50%;
+  transform-origin: center;
+  transition: all 0.4s linear;
+}
+.show {
+  right: 0 !important;
+}
+/* .submenu-show {
+        height: 300px;
+      } */
+.submenu-show {
+  height: 200px !important;
+}
+.animate-btn {
+  position: relative;
+  z-index: 8;
+}
+
+.animate-btn::before,
+.blue-button::before,
+.button-pink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s linear;
+  border-radius: 5px;
+  z-index: -1;
+}
+.blue-button::before {
+  background-color: #3577f0;
+}
+.button-pink::before {
+  background-color: #ff497c;
+}
+.animate-btn:hover::before {
+  transform: scale(1.1);
+}
+.arrow-container:hover .arrow-animation {
+  animation: arrow-animation 0.4s linear;
+}
+.arrow-container:hover .arrow-right-animation {
+  animation: arrow-right-animation 0.4s linear;
+}
+.category-card {
+  position: relative;
+}
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  transition: all 0.3s linear;
+}
+.category-card:hover::before {
+  transform: scale(1.04);
+}
+.wave {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-width: 2px 7px 0 0;
+  border-radius: 0 100% 0 0;
+  border-color: green;
+  transform: rotate(-96deg);
+  animation: wave-animation 1s linear infinite;
+}
+.wave2 {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  animation-delay: 0.1s;
+}
+.wave3 {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  animation-delay: 0.2s;
+}
+.wave4 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: -90px;
+  left: -90px;
+  animation-delay: 0.3s;
+}
+.discount-btn {
+  box-shadow: 2px 3px 20px #3577f0;
+}
+.button-group {
+  transition: all 0.3s linear;
+}
+.product-card:hover .button-group {
+  transform: translateY(-70px);
+  opacity: 1;
+}
+
+@keyframes wave-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes arrow-animation {
+  10% {
+    transform: translateX(-1px);
+  }
+  40% {
+    transform: translateX(-6px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes arrow-right-animation {
+  10% {
+    transform: translateX(1px);
+  }
+  40% {
+    transform: translateX(6px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
